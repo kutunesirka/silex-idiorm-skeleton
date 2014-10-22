@@ -1,0 +1,8 @@
+{
+    "require": {
+        "twig/twig": "1.15.*@dev",
+        "j4mie/idiorm": "1.5.*",
+        "j4mie/paris": "1.5.*",
+        "silex/silex": "~1.1"
+    }
+}

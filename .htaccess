@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /web/$1 [L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "modification plus 15 minutes"
+ExpiresByType text/css "access plus 1 weeks"
+ExpiresByType image/gif "access plus 1 weeks"
+ExpiresByType image/jpeg "access plus 1 weeks"
+ExpiresByType image/png "access plus 1 weeks"
+ExpiresByType application/x-javascript "access plus 1 weeks"
+</IfModule>

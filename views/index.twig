@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+{% block contents %}
+    <div class="posts">
+        {% for user in users %}
+            <h1 class="content-subhead">{{user.name}}</h1>
+
+            <!-- A single blog post -->
+            {% for post in user.posts.find_many %}
+            <section class="post">
+                <div class="post-description">
+                    <p>
+                       {{post.body}}
+                    </p>
+                </div>
+            </section>
+                    {% endfor %}
+        {% endfor %}
+    </div>
+{% endblock %}
